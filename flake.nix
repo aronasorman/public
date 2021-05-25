@@ -15,6 +15,8 @@
         buildInputs = with pkgs; [
           hugo
         ];
+        buildPhase = "hugo -D";
+        installPhase = "mkdir -p $out/; mv ./public/* $out/";
         src = self;
       };
   };
