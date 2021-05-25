@@ -14,6 +14,7 @@
         name = "website";
         buildInputs = with pkgs; [
           hugo
+          nodejs
         ];
         buildPhase = "hugo -D";
         installPhase = "mkdir -p $out/; mv ./public/* $out/";
